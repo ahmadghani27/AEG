@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
+import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
 import Profile from './pages/Profile';
@@ -11,6 +12,7 @@ function App() {
     // PERUBAHAN ADA DI SINI:
     // Kita tambahkan 'basename' agar router tahu dia sedang berjalan di folder /AEG/
     <Router basename={import.meta.env.BASE_URL}>
+      <ScrollToTop />
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
