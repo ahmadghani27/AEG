@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  app:
+    # Build image dari Dockerfile di directory saat ini (.)
+    build: .
+    
+    # Nama container biar gampang dicari
+    container_name: anti-porto-container
+    
+    # Kalo crash, dia bakal restart sendiri (kecuali kita stop manual)
+    restart: unless-stopped
+    
+    # Mapping Port: Akses di localhost:8080 -> Masuk ke Container port 80 (Nginx)
+    ports:
+      - "8080:80"
+    
+    # Environment variables (opsional, kalau nanti butuh)
+    environment:
+      - NODE_ENV=production
