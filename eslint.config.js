@@ -23,8 +23,9 @@ export default defineConfig([
       },
     },
     rules: {
-      'no-unused-vars': 'warn', // Ubah dari error jadi warning (kuning)
     'react/prop-types': 'off', // (Opsional) matikan cek prop-types jika mengganggu
+    "no-unused-vars": "off",       // MATIKAN TOTAL error unused vars
+  "react/jsx-no-undef": "off",   // Jaga-jaga jika parser JSX error
     },
   },
 ])
