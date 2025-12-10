@@ -8,7 +8,9 @@ import './App.css';
 
 function App() {
   return (
-    <Router>
+    // PERUBAHAN ADA DI SINI:
+    // Kita tambahkan 'basename' agar router tahu dia sedang berjalan di folder /AEG/
+    <Router basename={import.meta.env.BASE_URL}>
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
